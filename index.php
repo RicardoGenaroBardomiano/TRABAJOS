@@ -5,6 +5,7 @@
 	<title>Matematicas</title>
 </head>
 <body>
+<H6><b>POR RICARDO GENARO BARDOMIANO</b></H6>
 <H3>CALCULADORA DE OPERACIONES SIMPLES</H3>
 <form action="index.php" method="POST">
 	<table>
@@ -52,6 +53,7 @@ Selecciona el numero de la tabla de multiplicar
 	</tr>
 	</table>
 </form>
+
 </body>
 </html>
 <?php
