@@ -25,14 +25,37 @@
 		<td>Numero 2: </td><td><input type="text" name="Numero2"></td>
 	</tr>
 	<tr>
-		<td> <input type="submit" value="Calcular"> </td>
+		<td> <input type="submit" name="cal" value="Calcular"> </td>
 	</tr>
 </table>
+</form>
+<H3>TABLAS DE MULTIPLICAR</H3>
+<form action="index.php" method="POST">
+Selecciona el numero de la tabla de multiplicar
+	<table>
+	<td>
+		<select name="NumT">
+			<option value="1">1</option> 
+			<option value="2">2</option> 
+			<option value="3">3</option>
+			<option value="4">4</option>
+			<option value="5">5</option>
+			<option value="6">6</option>
+			<option value="7">7</option>
+			<option value="8">8</option>
+			<option value="9">9</option>
+			<option value="10">10</option>
+		</select>
+	</td>
+	<tr>
+		<td> <input type="submit" name="gen" value="Generar"> </td>
+	</tr>
+	</table>
 </form>
 </body>
 </html>
 <?php
-	if($_POST){
+	if(isset($_POST['cal'])){
 		if($_POST['Oper']==1){
 			$num1 = $_POST['Numero1'];
 			$num2 = $_POST['Numero2'];
@@ -57,5 +80,13 @@
 			$suma = $num1 / $num2;
 			echo "El resultado es: ".$suma; 
 		}
+	}
+	if(isset($_POST['gen'])){
+		for ($i = 1; $i <= 10; $i++) {
+			$m = $_POST['NumT'];
+			$mul = $m * $i;
+			echo $_POST['NumT']." x ".$i." = ".$mul;
+			echo "<br>";
+		} 
 	}
 ?>
