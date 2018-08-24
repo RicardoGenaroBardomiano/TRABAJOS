@@ -2,34 +2,42 @@
 <html lang="es-ES">
 <head>
 	<meta charset="UTF-8">
-	<title>Suma de 2 numeros en PHP</title>
+	<title>Matematicas</title>
 </head>
 <body>
-<H2>Suma de 2 numeros en PHP</H2>
-<form action="suma.php" method="POST">
+<H3>CALCULADORA DE OPERACIONES SIMPLES</H3>
+<form action="index.php" method="POST">
 	<table>
 	<tr>
-		<td><input type="text" name="numero1"></td>
+		<td>Numero 1: </td><td><input type="text" name="Numero1"></td>
+	</tr>
+	<td>
+	</td>
+	<td>
+		<select name="Oper">
+			<option value="1">+</option> 
+			<option value="2">-</option> 
+			<option value="3">*</option>
+			<option value="4">/</option> 
+		</select>
+	</td>
+	<tr>
+		<td>Numero 2: </td><td><input type="text" name="Numero2"></td>
 	</tr>
 	<tr>
-		<td><input type="text" name="numero2"></td>
-	</tr>
-	<tr>
-		<td> <input type="submit" value="sumar"> </td>
+		<td> <input type="submit" value="Calcular"> </td>
 	</tr>
 </table>
 </form>
 </body>
 </html>
 <?php
-	if($_POST)
-	{	
+	if($_POST){	
 		$num1 = $_POST
-		['numero1'];
+		['Numero1'];
 		$num2 = $_POST
-		['numero2'];
-		$suma = $num1 
-		+ $num2;
-		echo "La suma de ".$num1." y ".$num2." es ".$suma; 
+		['Numero2'];
+		$suma = $num1 + $num2;
+		echo "El resultado es: ".$suma; 
 	}
 ?>
