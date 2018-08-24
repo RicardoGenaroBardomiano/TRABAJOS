@@ -32,12 +32,30 @@
 </body>
 </html>
 <?php
-	if($_POST){	
-		$num1 = $_POST
-		['Numero1'];
-		$num2 = $_POST
-		['Numero2'];
-		$suma = $num1 + $num2;
-		echo "El resultado es: ".$suma; 
+	if($_POST){
+		if($_POST['Oper']==1){
+			$num1 = $_POST['Numero1'];
+			$num2 = $_POST['Numero2'];
+			$suma = $num1 + $num2;
+			echo "El resultado es: ".$suma; 
+		}
+		if($_POST['Oper']==2){
+			$num1 = $_POST['Numero1'];
+			$num2 = $_POST['Numero2'];
+			$suma = $num1 - $num2;
+			echo "El resultado es: ".$suma; 
+		}
+		if($_POST['Oper']==3){
+			$num1 = $_POST['Numero1'];
+			$num2 = $_POST['Numero2'];
+			$suma = $num1 * $num2;
+			echo "El resultado es: ".$suma; 
+		}
+		if($_POST['Oper']==4){
+			$num1 = $_POST['Numero1'];
+			$num2 = $_POST['Numero2'];
+			$suma = $num1 / $num2;
+			echo "El resultado es: ".$suma; 
+		}
 	}
 ?>
